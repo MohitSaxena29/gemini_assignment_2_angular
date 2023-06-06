@@ -1,0 +1,69 @@
+<form [formGroup]="loginForm" id="loginForm" class="mb-1 mx-auto col-10 col-md-8 col-lg-6">
+    <div class="col-md-4">
+      <div class="mb-2">
+          <label>Name</label>
+          <input type="text" name="name" class="form-control" id="name" placeholder="Name *" formControlName="name" >
+          <p class="error" *ngIf="name && name.invalid && (name.dirty || name.touched)" >Please enter a valid Name</p>
+      </div>
+      <div class="mb-2">
+        <label>Email</label>
+        <input type="text" name="email" class="form-control" id="email" placeholder="Email *" formControlName="email">
+        <p class="error" *ngIf="email && email.invalid && (email.dirty || email.touched)" >The Email is not valid</p>
+      </div>
+      <div class="mb-2">
+        <label>Mobile</label>
+        <input type="text" name="mobile" class="form-control" id="mobile" placeholder="Mobile *" formControlName="mobile">
+        <p class="error" *ngIf="mobile && mobile.invalid && (mobile.dirty || mobile.touched)" >This Mobile is not valid</p>
+      </div>
+      <div id="gender" class="mb-2">
+        <label>Gender</label>
+        <div class="form-check form-check-inline male">
+            <input class="form-check-input" type="radio" name="gender" id="male" value="male" formControlName="gender" [checked]="true">
+            <label class="form-check-label" for="male">Male</label>
+        </div>
+        <div class="form-check form-check-inline female">
+            <input class="form-check-input" type="radio" name="gender" id="female" value="female" formControlName="gender">
+            <label class="form-check-label" for="female">Female</label>
+        </div>
+      </div>
+      <div class="mb-2">
+          <label>Category</label>
+          <select class="form-control" name="question" id="category" formControlName="category" (blur)="changeCategory()">
+              <option value="" disabled selected hidden>Select your Category</option>
+              <option value="General">General</option>
+              <option value="SC/ST">SC/ST</option>
+              <option value="OBC">OBC</option>
+          </select>
+          <p class="error" *ngIf="category && category.invalid && categoryflag==true" >Please select category</p>
+      </div>
+  
+      <div class="mb-2">
+          <label>Technology</label>
+          <div class="form-check checkbox">
+              
+            <input class="form-check-input" type="checkbox" value="C" id="C" (change)="technology1checked($event);">
+            <label class="form-check-label">C</label>
+          </div>
+          <div class="form-check checkbox">
+              <input class="form-check-input" type="checkbox"  value="C++" id="C++"  (change)="technology2checked($event);">
+              <label class="form-check-label">C++</label>
+          </div>
+          <div class="form-check checkbox">
+              <input class="form-check-input" type="checkbox" value="Java" id="Java" (change)="technology3checked($event);">
+              <label class="form-check-label">Java</label>
+          </div>
+          <div class="form-check checkbox">
+              <input class="form-check-input" type="checkbox"  value="JavaScript" id="JavaScript"  (change)="technology4checked($event);">
+              <label class="form-check-label">JavaScript</label>
+          </div>
+      </div>
+      <div class="form-check photo mb-2">
+            <label class="header">Profile Photo:</label>
+            <input id="file" type="file" name="profile_photo" placeholder="Photo"  (change)="onFileChanged($event)">
+            <p class="error" *ngIf="showError">Only jpg,jpeg and png format are allowed</p>
+      </div>
+      <button class="previewbutton" [disabled]="loginForm.invalid || showError===true" (click)="open()">Preview</button>
+    </div>
+</form>
+
+  

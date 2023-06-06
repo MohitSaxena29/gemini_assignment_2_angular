@@ -1,0 +1,42 @@
+<div class="container" *ngIf="show">
+    <span>
+      <h3>Please fill data in form first.</h3>
+    </span>
+  
+  </div>
+
+<div class="grid-container" >
+    <div class="grid-item" *ngFor="let item of datas">
+      <div class="row">
+        <div class="col-sm-3 col-md-3 col-lg-3"><span class="viewdata">Image:</span></div>
+        <div class="col-sm col-md col-lg"><span class="displaydata"><img src="{{item.imagesurl}}" alt="No Image Chosen"></span></div>
+      </div>
+      <div class="row">
+        <div class="col-sm-3 col-md-3 col-lg-3"><span class="viewdata">Name:</span></div>
+        <div class="col-sm col-md col-lg"><span class="displaydata">{{item.name}}</span></div>
+      </div>
+      <div class="row">
+        <div class="col-sm-3 col-md-3 col-lg-3"><span class="viewdata">Email:</span></div>
+        <div class="col-sm col-md col-lg"><span class="displaydata">{{item.email}}</span></div>
+      </div>
+      <div class="row">
+        <div class="col-sm-3 col-md-3 col-lg-3"><span class="viewdata">Mobile:</span></div>
+        <div class="col-sm col-md col-lg"><span class="displaydata">{{item.mobile}}</span></div>
+      </div>
+      <div class="row">
+        <div class="col-sm-3 col-md-3 col-lg-3"><span class="viewdata">Gender:</span></div>
+        <div class="col-sm col-md col-lg"><span class="displaydata">{{item.gender}}</span></div>
+      </div>
+      <div class="row">
+        <div class="col-sm-3 col-md-3 col-lg-3"><span class="viewdata">Category:</span></div>
+        <div class="col-sm col-md col-lg"><span class="displaydata">{{item.category}}</span></div>
+      </div>
+      <div class="row">
+        <div class="col-sm-3 col-md-3 col-lg-3"><span class="viewdata">Technology:</span></div>
+        <div class="col-sm col-md col-lg"><span class="displaydata">{{item.technology}}</span></div>
+      </div>
+    </div> 
+  </div>
+
+
+

@@ -1,0 +1,20 @@
+<div class="modal-content" id="myModal">
+    <div class="modal-header modal-content">
+       <h4 class="modal-title" id="myModalLabel">Form Data</h4>
+    </div>
+    <div class="modal-body">
+        <div class="modal-data" *ngIf="showImage else elseBlock"><span> Image:</span><span><img src="{{this.imagesurl}}" alt=""></span></div>
+        <ng-template  #elseBlock><div class="modal-data"><span class="modal-data-heading"> Image:</span> <span class="modal-data-view">No Image Chosen</span></div></ng-template>
+        <div class="modal-data"><span class="modal-data-heading">Name:</span> <span class="modal-data-view">{{this.data.name}}</span></div>
+        <div class="modal-data"><span class="modal-data-heading">Email:</span> <span class="modal-data-view">{{this.data.email}}</span></div>
+        <div class="modal-data"><span class="modal-data-heading">Mobile:</span> <span class="modal-data-view">{{this.data.mobile}}</span></div>
+        <div class="modal-data"><span class="modal-data-heading">Gender:</span> <span class="modal-data-view">{{this.data.gender}}</span></div>
+        <div class="modal-data"><span class="modal-data-heading">Category:</span> <span class="modal-data-view">{{this.data.category}}</span></div>
+        <div class="modal-data" *ngIf="showTechnology else elseBlocks"><span class="modal-data-heading">Technology:</span> <span class="modal-data-view">{{this.technologychecked}}</span></div>
+        <ng-template #elseBlocks><div class="modal-data"><span class="modal-data-heading">Technology:</span> <span class="modal-data-view">No Technology Chosen</span></div></ng-template>
+    </div>
+    <div class="modal-footer">
+        <a><button type="button" class="btn btn-primary" (click)="saveData()" data-bs-dismiss="modal">Save</button></a>
+        <button type="button" class="btn btn-default" (click)="cancelData()">Cancel</button>
+    </div>
+</div>

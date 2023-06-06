@@ -1,0 +1,156 @@
+html,body{
+    overflow-x: hidden;   
+}
+  
+h5{
+    font: 20px;
+}
+
+img{
+    height: 60px;
+    width: 90px;
+}
+
+.col-md-4{
+    width: 240px;
+}
+
+
+.mb-2{
+    padding-top: 10px;
+}
+
+form div{
+    margin: auto;
+}
+.row{
+    border: 2px solid black;
+}
+
+#myForm{
+    margin: 20px;
+}
+
+#gender label{
+    margin-right: 10px;
+
+}
+div label{
+    margin-bottom: 10px;
+}
+
+.form{
+    margin: 40px;  
+}
+
+.female{
+    padding-left: 86px;
+}
+#loginForm{
+    border: 2px solid black;
+    margin-top: 20px;
+    background: linear-gradient(to right, #a1c4fd, #c2e9fb);
+}
+button{
+    margin-left: 40%;
+}
+
+.previewbutton:disabled:hover{
+    background-color: red;
+    transition: 0.5s;
+}
+
+button:hover{
+    background-color: green;
+    transition: 0.5s;
+}
+
+.btn{
+    margin: 5px;
+    padding: 5px;
+    margin-left: 0;
+}
+  .checkbox{
+    padding-left: 25px;
+  }
+
+  .photo{
+    padding-left: 0px;
+  }
+
+  .previewbutton{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: 60px;
+  }
+
+  input[type="file"]{
+    white-space: normal;
+    word-wrap: break-word;
+    width: 350px;
+    overflow: auto;
+  }
+
+  .error{
+    color: red;
+    font-size: 12px;
+  }
+
+@media ((min-width: 770px) and (max-width: 1100px))
+  {
+    .col-md-4{
+        width: 240px;
+    }
+}
+
+@media (max-width: 767px){
+    .col-md-4{
+        padding: 20px;
+    }
+    .female{
+        padding-left: 86px;
+    }
+
+    .previewbutton{
+        margin-left: 50px;
+      }
+
+}
+
+@media (max-width: 700px){
+
+    .form{
+        margin: 0px;
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 450px){
+    .previewbutton{
+        margin-left: 30%;
+    }
+    input[type="file"]{
+        width: 250px;
+      }
+
+}
+
+@media (max-width: 310px)
+  {
+    input[type="file"]{
+        width: 120px;
+      }
+    .col-md-4{
+        width: 150px;
+    }
+    .previewbutton{
+        margin-left: 14%;
+    }
+    .female{
+        padding-left: 25px;
+    }
+}
+
+
