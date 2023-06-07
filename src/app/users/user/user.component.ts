@@ -32,7 +32,7 @@ export class UserComponent {
 
   loginForm= new FormGroup({
     name: new FormControl('',[Validators.required,Validators.pattern("^[a-zA-Z ]*$"),Validators.minLength(2),Validators.maxLength(30)]),
-    email: new FormControl('',[Validators.required,Validators.pattern('[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}')]),
+    email: new FormControl('',[Validators.required,Validators.pattern('[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}')]),
     mobile: new FormControl('',[Validators.required,Validators.pattern(/^([5-9]\d{9})$/)]),
     gender: new FormControl('male',[Validators.required]),
     category: new FormControl('',[Validators.required]),
